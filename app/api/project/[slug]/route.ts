@@ -3,7 +3,7 @@ import { doc, getDoc } from 'firebase/firestore'
 
 export async function GET(
   request: Request,
-  { params }: { params: { slug: string } }
+  { params }: { params: { slug: string } },
 ) {
   const { slug } = params
   const docRef = doc(db, 'projects', slug)

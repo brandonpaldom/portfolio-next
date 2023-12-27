@@ -14,7 +14,8 @@ export default function Button({
   className,
   icon,
   children,
-}: Props) {
+  ...props
+}: Props & React.ComponentPropsWithoutRef<'button'>) {
   return (
     <button
       type={type}
@@ -28,6 +29,7 @@ export default function Button({
         variant === 'ghost' && 'bg-transparent text-white hover:bg-neutral-800',
         className,
       )}
+      {...props}
     >
       {icon}
       {children}

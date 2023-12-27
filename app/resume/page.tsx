@@ -18,7 +18,7 @@ export default async function Page() {
 
   return (
     <>
-      <h1>Curriculum</h1>
+      <h1>Currículum</h1>
       <ResumeContent className="mt-4" resume={resume} />
     </>
   )

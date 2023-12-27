@@ -12,7 +12,7 @@ const navbarItems: NavbarItem[] = [
   },
   {
     path: '/resume',
-    pathName: 'Curriculum',
+    pathName: 'Currículum',
   },
 ]
 

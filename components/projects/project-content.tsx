@@ -3,9 +3,8 @@ import Image from 'next/image'
 import { FaEarthAmericas, FaGithub } from 'react-icons/fa6'
 import Badge from '../ui/badge'
 import Button from '../ui/button'
-import { Project } from '@/interfaces/project'
-import { json } from 'stream/consumers'
 import Alert from '../ui/alert'
+import { Project } from '@/interfaces/project'
 
 interface Props {
   project: Project
