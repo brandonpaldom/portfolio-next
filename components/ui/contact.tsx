@@ -12,7 +12,7 @@ const contactItems: ContactItem[] = [
     icon: <FaEnvelope size={16} />,
   },
   {
-    href: 'https://www.linkedin.com/in/brandonpaldom',
+    href: 'https://linkedin.com/in/brandonpaldom',
     icon: <FaLinkedin size={16} />,
   },
   {

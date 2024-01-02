@@ -32,18 +32,24 @@ export default function ProjectContent({ project }: Props) {
           <Link href={project.url} target="_blank" rel="noopener noreferrer">
             <Button icon={<FaEarthAmericas />}>Ver proyecto</Button>
           </Link>
-          <Link href={project.url} target="_blank" rel="noopener noreferrer">
-            <Button variant="secondary" icon={<FaGithub />}>
-              Ver código
-            </Button>
-          </Link>
+          {project.github && (
+            <Link
+              href={project.github}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button variant="secondary" icon={<FaGithub />}>
+                Ver código
+              </Button>
+            </Link>
+          )}
         </div>
       )}
       {project.images && (
         <div
           className={
             project.squareImage
-              ? 'grid grid-cols-2 gap-4'
+              ? 'grid grid-cols-1 gap-4 sm:grid-cols-2'
               : 'flex flex-col gap-4'
           }
         >
