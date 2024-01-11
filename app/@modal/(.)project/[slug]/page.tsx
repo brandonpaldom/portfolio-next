@@ -1,5 +1,4 @@
 import { Metadata } from 'next'
-import { notFound } from 'next/navigation'
 import ProjectModal from '@/components/projects/project-modal'
 import { getProject } from '@/actions/projects/get-project'
 import { Project } from '@/interfaces/project'

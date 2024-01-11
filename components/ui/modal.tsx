@@ -40,7 +40,7 @@ export default function Modal({ children }: Props) {
 
   return (
     <div className="relative z-50">
-      <div className="fixed inset-0 bg-black/30" />
+      <div className="fixed inset-0 bg-black/30 backdrop-blur-sm" />
       <div className="fixed inset-0 w-screen overflow-y-auto">
         <div
           ref={overlay}
