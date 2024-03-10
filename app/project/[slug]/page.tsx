@@ -1,7 +1,8 @@
 import { Metadata } from 'next'
 import ProjectContent from '@/components/projects/project-content'
-import { getProject } from '@/actions/projects/get-project'
 import { Project } from '@/interfaces/project'
+import { getProjectBySlug } from '@/helpers/projects'
+import { projects } from '@/data'
 
 interface Props {
   params: { slug: string }
@@ -9,10 +10,7 @@ interface Props {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = params
-
-  const project: Project = await fetch(
-    `${process.env.NEXT_PUBLIC_API_URL}/project/${slug}`,
-  ).then((res) => res.json())
+  const project: Project = getProjectBySlug(slug)
 
   return {
     title: project.name,
@@ -25,18 +23,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export async function generateStaticParams() {
-  const projects = await fetch(
-    `${process.env.NEXT_PUBLIC_API_URL}/projects`,
-  ).then((res) => res.json())
-
   return projects.map((project: { slug: string }) => ({
     slug: project.slug,
   }))
 }
 
-export default async function Page({ params }: Props) {
+export default function Page({ params }: Props) {
   const { slug } = params
-  const project = await getProject(slug)
+  const project = getProjectBySlug(slug)
 
   return <ProjectContent project={project} />
 }
