@@ -7,6 +7,7 @@ import Contact from '@/components/ui/contact'
 import Skills from '@/components/ui/skills'
 import Navbar from '@/components/ui/navbar'
 import Footer from '@/components/ui/footer'
+import { Analytics } from '@vercel/analytics/react'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -47,6 +48,7 @@ export default function RootLayout(props: {
             <Footer />
           </div>
         </div>
+        <Analytics />
       </body>
     </html>
   )
