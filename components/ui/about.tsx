@@ -16,8 +16,8 @@ export default function About() {
           className="rounded-full"
         />
       </Link>
-      <p className="mt-4 text-lg font-bold">Brandon Palmeros</p>
-      <p className="text-sm">Desarrollo front-end</p>
+      <p className="mt-4 text-xl font-medium">Brandon Palmeros</p>
+      <p className="text-sm text-neutral-500">Desarrollo front-end</p>
       <Badge
         variant="outline"
         icon={<FaLocationDot size={16} />}

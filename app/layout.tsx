@@ -34,10 +34,12 @@ export default function RootLayout(props: {
       <body className={inter.className}>
         <Cover />
         <div className="mx-auto -mt-[3.75rem] grid max-w-screen-xl grid-cols-1 gap-4 p-4 lg:-mt-[6.25rem] lg:grid-cols-[20rem,auto]">
-          <div className="flex flex-col gap-4">
-            <About />
-            <Contact />
-            <Skills />
+          <div>
+            <div className="flex flex-col gap-4 lg:sticky lg:top-4">
+              <About />
+              <Contact />
+              <Skills />
+            </div>
           </div>
           <div className="flex flex-col gap-4">
             <Navbar />
